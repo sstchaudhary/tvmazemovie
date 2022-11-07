@@ -1,0 +1,3 @@
+export const  SET_MOVIES='SET_MOVIES';
+export const SUMMERY_MOVIES='SUMMERY_MOVIES';
+export const ADD_MOVIE_DETAILS='ADD_MOVIE_DETAILS';
