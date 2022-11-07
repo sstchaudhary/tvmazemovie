@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/tvmazemovie/static/css/main.10d53958.css",
-    "main.js": "/tvmazemovie/static/js/main.a73ed561.js",
+    "main.css": "/tvmazemovie/static/css/main.b43d0ce9.css",
+    "main.js": "/tvmazemovie/static/js/main.5fbd9632.js",
     "index.html": "/tvmazemovie/index.html",
-    "main.10d53958.css.map": "/tvmazemovie/static/css/main.10d53958.css.map",
-    "main.a73ed561.js.map": "/tvmazemovie/static/js/main.a73ed561.js.map"
+    "main.b43d0ce9.css.map": "/tvmazemovie/static/css/main.b43d0ce9.css.map",
+    "main.5fbd9632.js.map": "/tvmazemovie/static/js/main.5fbd9632.js.map"
   },
   "entrypoints": [
-    "static/css/main.10d53958.css",
-    "static/js/main.a73ed561.js"
+    "static/css/main.b43d0ce9.css",
+    "static/js/main.5fbd9632.js"
   ]
 }
