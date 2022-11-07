@@ -8,16 +8,31 @@
   const StyleTypography=styled(Typography)`
    font-size:20px;
    font-weight:300;
+   margin-top:-130px;
  `
  const NewTypography=styled(Typography)`
   font-size:15px;
   font-weight:200;
   margin-top:-200px;
+  @media (max-width:425px) {
+      margin-left:200px;
+  }
+  @media (max-width:768px) {
+       
+  }
 
 `
  const StyleCardActions=styled(CardActions)`
  padding:2px;
- margin-top:-300px;
+ margin-top:-400px;
+ @media (max-width:425px) {
+    margin-top:-450px;
+      
+      }
+      @media (max-width:768px) {
+        margin-top:-450px;
+     }
+
 `
 
   const BookedDetails = () => {
@@ -31,17 +46,17 @@
                 BookingDetails...
             </StyleTypography>
                   <NewTypography variant="body2" color="text.secondary">
-                   <ul>
-                    <li>{bookingdata.name} </li>
-                    <li>{bookingdata.username} </li>
-                    <li> {bookingdata.email} </li>
-                    <li> {bookingdata.phone} </li>
+                   <ul className='ulcss'>
+                    <li className='licss'><b>Customer Name:</b>{bookingdata.name} </li>
+                    <li className='licss'><b>No.Of Ticket:</b>{bookingdata.username} </li>
+                    <li className='licss'> <b>Customer Email :</b>{bookingdata.email} </li>
+                    <li className='licss'> <b>Customer Phone:</b>{bookingdata.phone} </li>
                    </ul>
                  </NewTypography>
                   
         </div>
         <StyleCardActions>
-          <Button size="large" variant="contained" onClick={()=>navigate('/tvmazemovie')}>SearchMovie</Button>
+          <Button size="small" variant="contained" onClick={()=>navigate('/tvmazemovie')}>SearchMovie</Button>
           </StyleCardActions>
       </div>
     )

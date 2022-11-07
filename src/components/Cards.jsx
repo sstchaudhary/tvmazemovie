@@ -55,7 +55,7 @@ const StyleCard=styled(Card)`
                     </Typography>
                 </CardContent>
                 <StyleCardActions>
-                    <Button size="large" onClick={SummeryAll} >Summery</Button>
+                    <Button size="small" variant="contained"onClick={SummeryAll} >Summery</Button>
                 </StyleCardActions>
             </StyleCard>
             </div>

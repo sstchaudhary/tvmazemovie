@@ -11,14 +11,37 @@ import { useSelector } from 'react-redux';
 import '../App.css'
 import { useNavigate } from 'react-router-dom';
 const StyleCard=styled(Card)`
-      width:450px;
-      margin-top:20px;   
+      width:95%;
+      display:flex;
+      flex-direction:row;
+      align-item:center;
+      justify-content:center;
+      margin-left:20px;
+      margin-right:20px;
+      margin-top:1px;
+      @media (max-width:425px) {
+      flex-direction:column;
+      align-item:center;
+      justify-content:center;
+      margin-left:5px;
+      margin-top:5px;
+      
+      }
+      @media (max-width:768px) {
+      flex-direction:column;
+      align-item:center;
+      justify-content:center;
+      margin-left:17px;
+      margin-top:1px;
+     }
  `
  const StyleCardActions=styled(CardActions)`
       padding:2px;
-      margin-top:-35px ;
-      margin-left:250px;
-    
+      margin-top:-40px ;
+      margin-left:400px;
+      @media (max-width:768px) {
+        margin-left:100px;
+     }
  `
  const StyledAppbar = styled(AppBar)`
       position:relative;
@@ -27,8 +50,34 @@ const StyleCard=styled(Card)`
       align-content:center;
       background:#fff;
       color:blue;
-      
+      width:100vw;
 
+ `
+ const Cardmediastyle=styled(CardMedia)`
+       height:20%;
+       width:20%;
+       margin-left:10px;
+       margin-right:10px; 
+       margin-top:10px; 
+       margin-bottom:20px;
+      
+      @media (max-width:425px) {
+       height:50%;
+       width:70%;
+       margin-left:10px;
+       margin-right:10px; 
+       margin-top:10px; 
+       margin-bottom:10px;
+  }
+  @media (max-width:768px) {
+       height:40%;
+       width:40%;
+       margin-left:5px;
+       margin-right:5px; 
+       margin-top:10px; 
+       margin-bottom:10px;
+  }
+       
  `
  const StyleTypography=styled(Typography)`
   font-size:30px;
@@ -56,7 +105,6 @@ const Summery = () => {
   return (
     <>
            
-        <div className='app1'>
             <StyledAppbar>
                 <Toolbar>
                     <StyleTypography>
@@ -70,11 +118,10 @@ const Summery = () => {
                  moviedata.map((data)=>(
                     
                     
-                    <StyleCard>
-                <CardMedia
+            <StyleCard>
+                <Cardmediastyle
                     component="img"
-                    height="600"
-                    image={data.show.image.medium}
+                    image={data.show.image.original}
                     alt="green iguana"
                 />
                 
@@ -83,7 +130,7 @@ const Summery = () => {
                     <Typography gutterBottom variant="h5" component="div">
                           {data.show.name}
                           <StyleCardActions>
-                         <Button size="large" onClick={()=>navigate(`/tvmazemovie/form/${data.show.id}`)}>BookNow</Button>
+                         <Button size="small" variant="contained"onClick={()=>navigate(`/tvmazemovie/form/${data.show.id}`)}>BookNow</Button>
                          </StyleCardActions>
                     </Typography>
                     
@@ -102,7 +149,6 @@ const Summery = () => {
                 
                )
             }
-            </div>
             </div>
     </>
   )
